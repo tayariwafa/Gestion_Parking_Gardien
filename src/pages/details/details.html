@@ -1,0 +1,39 @@
+
+<ion-header>
+    <ion-navbar>
+        <ion-title><strong style="animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; margin-left: 17%;">Détails</strong></ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding  id="Saisie" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+          <ion-item-group>
+              <ion-item-divider color="light"><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white; color: dodgerblue; font-weight: bold;">Voiture : </p></ion-item-divider>
+              <ion-item>
+                  <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Matricule</p></ion-label>
+                  <ion-input type="text"  [(ngModel)]="voitures1.Matricule"  name="Matricule" disabled={{isActivated}}> {{voitures1.Matricule}} </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Couleur</p></ion-label>
+                  <ion-input type="text"  [(ngModel)]="voitures1.couleur"  name="couleur" disabled={{isActivated}}>{{voitures1.couleur}}</ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Marque</p></ion-label>
+                  <ion-input type="text"  [(ngModel)]="voitures1.Marque"  name="Marque" disabled={{isActivated}}>{{voitures1.Marque}}</ion-input>
+              </ion-item>
+          </ion-item-group>
+          <ion-item-group>
+              <ion-item>
+                  <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Surplus</p></ion-label>
+                  <ion-input type="text"  disabled={{isActivated}}></ion-input><!--[(ngModel)]="voitures1.Surplus"  name="Surplus" -->
+              </ion-item>
+              <ion-item>
+                  <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Montant Initial</p></ion-label>
+                  <ion-input type="text"  disabled={{isActivated}}></ion-input><!--[(ngModel)]="voitures1.MontantInitial"  name="MontantInitial" -->
+              </ion-item>
+              <br>
+                  <button ion-button style="margin-top:  2px;  "   class="marginTop"  round (click)="CalculerMontant()"><!--(ngSubmit)="saveUser()"-->
+                       <ion-icon name="logo-usd" ></ion-icon>
+                      <p style="font-family:'Tempus Sans ITC'; font-size: small; flood-color: white;font-weight: bold;"> Payer</p>
+                  </button> 
+            
+          </ion-item-group>
+  </ion-content>

@@ -1,0 +1,27 @@
+<ion-menu [content]="content" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+  <ion-header>
+    <ion-toolbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+  <ion-content padding class="id">
+      <ion-list>
+          <button ion-item (click)="openPage(homePage)">
+           Profile
+          </button>
+          <button ion-item (click)="openPage(friendsPage)">
+           Contact
+          </button>
+          <button ion-item (click)="openPage(eventsPage)">
+            Logout
+          </button>
+        </ion-list>
+  </ion-content>
+</ion-menu>
+ 
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

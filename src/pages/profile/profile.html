@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+      <ion-buttons start >
+          <button ion-button (click)="modif()">
+            <ion-icon name="settings" ></ion-icon>
+          </button>
+      </ion-buttons>
+      <ion-title><strong style="animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; margin-left: 17%;">Profile</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  id="profile"  style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+    <form (ngSubmit)="updateProfile()">
+        <ion-list >
+            <ion-item-group>
+                <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;"> Coordonnée Personnelle :</p>
+          <ion-item >
+              <ion-label> <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Nom</p></ion-label>
+            <ion-input type="text" placeholder=" " [(ngModel)]="gardien.nom"  name="nom"  disabled={{isActivated}}>
+             {{gardien.nom}}
+            </ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;"> Prénom</p></ion-label>
+              <ion-input type="text" placeholder="" [(ngModel)]="gardien.prenom"  name="prenom" disabled={{isActivated}}>
+                {{gardien.prenom}}
+              </ion-input>
+            </ion-item>
+            <ion-item >
+                <ion-label ><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">E-mail</p></ion-label>
+                <ion-input type="email" placeholder="" [(ngModel)]="gardien.email"  name="email"  disabled={{isActivated}}>
+                    {{gardien.email}}
+                </ion-input>
+              </ion-item>
+              <ion-item >
+                  <ion-label><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Numéro téléphone </p> </ion-label>
+                  <ion-input type="text" placeholder="" [(ngModel)]="gardien.numtel"  name="numtel"  disabled={{isActivated}} >
+                      {{gardien.numtel}}
+                  </ion-input>
+                </ion-item>
+                <ion-item >
+                    <ion-label><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;"> Cin </p></ion-label>
+                    <ion-input type="text" placeholder=" " [(ngModel)]="gardien.cin"  name="cin" disabled={{Activated}} >
+                        {{gardien.cin}}
+                    </ion-input>
+                </ion-item>
+                <ion-item >
+                    <ion-label><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;"> Temps Horaire</p> </ion-label>
+                    <ion-input type="text" placeholder=" " [(ngModel)]="gardien.temps"  name="temps" disabled={{Activated}} >
+                        {{gardien.temps}}
+                    </ion-input>
+                </ion-item>
+                <ion-item >
+                    <ion-label> <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Nombre D'heure</p> </ion-label>
+                    <ion-input type="text" placeholder=" " [(ngModel)]="gardien.nbheure"  name="nbheure" disabled={{Activated}} >
+                        {{gardien.nbheure}}
+                    </ion-input>
+                </ion-item>
+                <ion-item >
+                    <ion-label> <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Salaire</p> </ion-label>
+                    <ion-input type="text" placeholder=" " [(ngModel)]="gardien.salaire"  name="salaire" disabled={{Activated}} >
+                        {{gardien.salaire}}
+                    </ion-input>
+                </ion-item>
+                </ion-item-group>
+        <br>
+         <button  ion-button  round (click)="annule()">
+             <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;"> Annuler</p>
+         </button>
+         <button  ion-button type="submit" style="margin-top:  2px;  "   class="marginTop"  round (click)="update()">
+             <p style="font-family:'Tempus Sans ITC'; font-size: small; flood-color: white;font-weight: bold;"> Modifier</p>
+         </button>
+
+        </ion-list>
+    </form>
+</ion-content>

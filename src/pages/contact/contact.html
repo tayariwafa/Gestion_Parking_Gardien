@@ -1,0 +1,31 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Appeler </ion-title>
+
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding id="Saisie" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+       
+
+          <ion-item-group>
+            <ion-item-divider color="light">Liste Des Contacts</ion-item-divider>
+            <ion-item *ngFor="let contacts of contact">
+                <ion-row>
+                    <ion-col>
+                      <button ion-button icon-left clear small>
+                        <ion-icon name="call"></ion-icon>
+                        <div>{{contacts.nom_contact}}</div>
+                      </button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+          </ion-item-group>
+
+    
+  </ion-content>
+  

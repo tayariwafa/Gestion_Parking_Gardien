@@ -1,0 +1,29 @@
+
+
+<ion-content padding class="login" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+    <div>
+    <img src="../assets/imgs/login.png"  alt="logo" class="logo" style=" width: 50%; height: 50%;margin-left: 20%; ">
+            <br>
+            <br>
+    <ion-list >
+        <ion-item >
+            <ion-label  floating ><p style="font-family:'Tempus Sans ITC';font-weight: bold;" >Nom</p> </ion-label>
+        <ion-input type="text" name="username" [(ngModel)]="credentials.username" style=""></ion-input>
+        </ion-item>
+      <br>
+        <ion-item >
+            <ion-label   floating><p style="font-family:'Tempus Sans ITC';font-weight: bold;">Mot de Passe</p></ion-label>
+        <ion-input type="password"  name="password" [(ngModel)]="credentials.password"></ion-input>
+        </ion-item>
+    </ion-list>
+      <button style="margin-left: 5%;margin-top:  2px; " ion-button class="marginTop"   round (click)="login()" >
+          <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Connexion</p>
+      </button>
+      <button style="margin-top:  2px;  "  ion-button class="marginTop"   round (click)="cancel()" >
+          <p style="font-family:'Tempus Sans ITC'; font-size: small; font-weight: bold;"> Annuler</p>
+      </button>
+      <p text-right ion-text tappable (click)="nextpage()"><strong style="color:dodgerblue; font-family:'Tempus Sans ITC'; font-weight: bold; font-size: medium; text-decoration: underline; ">Mot de passe oublier ?</strong></p><!--style="color: #fff;"-->
+
+    </div>
+
+  </ion-content>

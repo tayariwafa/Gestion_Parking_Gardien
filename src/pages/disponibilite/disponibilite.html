@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Places disponible</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding  id="Saisie" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;"style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+  <ion-content>
+    <ion-item-group *ngFor="let place of dispo" >
+      <ion-list>
+               <ion-item>
+                <ion-label>{{place.Nom_p}}</ion-label>
+                <ion-toggle  checked="true"></ion-toggle>
+               </ion-item>
+      </ion-list>
+    </ion-item-group>
+  </ion-content>
+  </ion-content>
+  

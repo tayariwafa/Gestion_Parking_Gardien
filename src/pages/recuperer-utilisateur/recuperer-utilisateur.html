@@ -1,0 +1,34 @@
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-title><strong style="animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; margin-left: 17%;">Renouvler Mot de passe</strong> </ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="login" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;" padding id="Recup">
+    <div>
+      <strong style="color:dodgerblue; animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; font-weight: bold;">Avant de commencer le renouvellement insérer votre Cin ainsi que votre Numéro téléphone </strong>
+    </div>
+    <br>
+    <div>
+    <ion-list>
+    <ion-item>
+        <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Cin</p></ion-label>
+        <ion-input type="text"  [(ngModel)]="gardien.cin_g"  name="cin_g"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+          <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Numéro téléphone</p></ion-label>
+     <ion-input type="text" [(ngModel)]="gardien.tel_g"  name="tel_g"></ion-input>
+      </ion-item><br><br>
+      <button  ion-button style="margin-top:  2px;  "   class="marginTop"   round (click)="recupererGardien()">
+            <p style="font-family:'Tempus Sans ITC'; font-size: small; flood-color: white;font-weight: bold;">Vérifier</p>
+        </button>
+      </ion-list>
+    </div>
+  </ion-content>
+
+

@@ -1,0 +1,11 @@
+page-profile {
+    .marginTop:hover{
+        margin-top: 80px;
+        background-color:dodgerblue;
+        color: #222222;
+    }
+    #profile{
+        background: color($colors, danger);
+       
+    }
+}

@@ -1,0 +1,25 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Paiement par Espèces :</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  <ion-content  padding id="Saisie">
+      <ion-card>
+          <ion-card-header>
+          </ion-card-header>
+          <ion-card-content>
+            Vous avez un montant à résevoire de la part de ce visiteur,<br>
+            égale à :
+            <ion-input type="text" placeholder="dt" >{{montant.Montantpayer}}</ion-input> <!--conserver le nom Montantpayer dans l'api-->
+          </ion-card-content>
+        </ion-card>
+        <button ion-button round color="secondary">
+            <ion-icon name="logo-usd" ></ion-icon>
+              Payer
+        </button>
+        <button ion-button round color="black" (ngSubmit)="saveMontant()" (click)="retour()">Entrer</button>
+  </ion-content>
+  

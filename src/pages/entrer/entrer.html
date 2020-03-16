@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start >
+        <button ion-button (click)="ReserverPassager()">
+          <ion-icon name="add-circle" style="color: dodgerblue; " ></ion-icon>
+          </button>
+
+          </ion-buttons>
+        <ion-title><strong style="animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC';"> Réserver pour un passager --> <ion-icon name="car"></ion-icon> </strong></ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-navbar>
+  </ion-header>
+<ion-content  class="id" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+    <p style="color:dodgerblue; animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; font-weight: bold; margin-left:7%;"> Entrez la matricule voiture que vous souhaitez rechercher</p>
+      <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+         <ion-list *ngFor="let mat of matricule" >
+             <ion-item style="margin-left: 5%; margin-bottom: 10%;"> <!--name="matricule" [(ngModel)]="mat.matricule"  style="color: white; "-->
+                    {{ mat.Matricule }}
+             </ion-item>
+        </ion-list>
+</ion-content>
+<!-- <ion-list *ngFor="let mat of matricule">
+   <ion-item style=" background-color: transparent; color: white;"><!--[(ngModel)]="voiture.matricule" name="matricule"-->
+<!--   <ion-label>{{ mat.Matricule }}</ion-label>
+   <ion-checkbox color="dark" checked="false" (checked)="conserverReservation()"></ion-checkbox>
+</ion-item>
+</ion-list>-->

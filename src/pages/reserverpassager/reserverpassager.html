@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title><strong style="animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; margin-left: 25%;">Réserver Place</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="reserver" class="login" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+    <form>
+        <strong style="color:dodgerblue; animation-direction:alternate-reverse; font-size:medium;font-family:'Tempus Sans ITC'; font-weight: bold;">Pour réserver  un place à un passager inserez son matricule voiture !</strong>
+        <br><br>
+  <ion-item-group>
+    <ion-item>
+        <ion-item-divider >Insérer matricule voiture</ion-item-divider>
+        <ion-label floating> <p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Matricule:</p></ion-label>
+        <ion-input type="text" [(ngModel)]="passager.Matricule" name="Matricule">
+        </ion-input>
+    </ion-item>
+      <br>
+    <button ion-button  type="submit" style="margin-top:  2px;  "   round class="marginTop"  (click)="reserverPassager()">
+        <p style="font-family:'Tempus Sans ITC'; font-size: small; flood-color: white;font-weight: bold; "> Réserver</p>
+    </button>
+  </ion-item-group>
+    </form>
+</ion-content>

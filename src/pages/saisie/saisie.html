@@ -1,0 +1,37 @@
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-title><strong style="animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC';">Renouvler Mot de passe</strong></ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding id="Saisie" style="background-image: url('http://images8.alphacoders.com/366/thumb-1920-366762.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;">
+    <div>
+        <strong style="color:dodgerblue; animation-direction:alternate-reverse; font-size:small;font-family:'Tempus Sans ITC'; font-weight: bold; margin-left: 10%;">Insérer Votre Nouveau Mot de passe</strong>
+    </div>
+    <br>
+    <div>
+  
+   
+    <ion-list >
+    <ion-item>
+        <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Nouveau Mot de passe :</p></ion-label>
+        <ion-input type="password" [(ngModel)]="gardien.mdp_g"  name="mdp_g"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label  floating><p style="font-family:'Tempus Sans ITC';font-size: small; flood-color: white;font-weight: bold;">Confirmer Nouveau Mot de passe</p> </ion-label>
+          <ion-input type="password" [(ngModel)]="gardien.mdp2"  name="mdp2"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div>
+        <button  ion-button style="margin-top:  2px;  "   class="marginTop"  round (click)="Confirmer()" >
+            <p style="font-family:'Tempus Sans ITC'; font-size: small; flood-color: white;font-weight: bold;">  Confirmer</p>
+           </button>
+    </div>
+  
+  </ion-content>
+  
